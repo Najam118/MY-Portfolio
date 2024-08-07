@@ -1,0 +1,619 @@
+/*================
+   Clock
+==================*/
+@import url("https://fonts.maateen.me/adorsho-lipi/font.css");
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    margin-top: 5px;
+}
+.mywatch{
+margin-left: 1130px;
+}
+.mywatch div{
+    float: left;
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+    margin: 3px;
+    height: auto;
+    
+}
+.H1{ 
+    width: 15%;
+    height: 70px;
+    background-color: red;
+    border: 5px solid red ;
+    border-radius: 10%;
+    cursor: pointer; 
+}
+.H2{ 
+    width: 15%;
+    height: 70px;
+    background-color:green;
+    border: 5px solid red ;
+    border-radius: 10%; 
+    cursor: pointer; 
+}
+.H{ 
+    width: 15%;
+    height: 70px;
+    background-color: brown;
+    border: 5px solid red ;
+    border-radius: 10%; 
+    cursor: pointer; 
+} 
+.M{ 
+    width: 15%;
+    height: 70px;
+    background-color:tomato;
+    border: 5px solid red ;
+    border-radius: 10%; 
+    cursor: pointer; 
+}
+.date{
+    margin-left: 1135px;
+    width: 15.2%;
+    height: 25px;
+    margin-top: 10px;
+    background-color: greenyellow;
+    border: 4px solid red ;
+    border-radius: 2%; 
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer; 
+}
+
+/*=================
+ Calculator
+=================*/
+
+.calculator{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(140%,-40%);
+    width: 340px;
+    height: 450px;
+   
+}
+table{
+    border-collapse: collapse;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.1),0px 10px 50px;
+    border: 2px solid;
+}
+td{
+    text-align: center;
+    color: #fff;
+    border: 1px solid #919199;
+}
+input[type="button"]{
+    width: 90px;
+    height: 80px;
+    color: #fff;
+    background-color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    outline: none ;
+    border: none ;
+}
+input[type="button"]:hover{
+    background-color: #19d;
+    outline: none;
+}
+input[type="text"]{
+    width: 340px;
+    height: 80px;
+    padding: 2px;
+    outline: none ;
+    border: none ;
+    font-size: 30px;
+    text-align: right;
+    
+}
+/*==================
+   Drag & Drop
+=====================*/
+.AppBody{
+    margin-left: 50px;
+    width: 90%;
+    height: 95vh;
+    text-align: center;
+    border: 3px solid #99e0e0;
+    justify-content: center;
+    align-items: center;
+    background:#eeeaeb;
+    box-shadow: rgba(0, 0, 0, 0.1),0px 10px 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.AppBody.active{
+    border:  3px solid rgb(49, 168, 12);
+}
+.icons{
+    font-size: 100px;
+    background:transparent;
+    color:#19d;
+}
+.AppBody h3{
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
+}
+.AppBody span{
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0 18px 0;
+}
+.AppBody button{
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background:#19d;
+    color: rgba(13, 284, 45, 0.651);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.AppBody button:hover{
+    background: #333;
+}
+
+@media(max-width:750px){
+    .AppBody{
+        width: 85%; 
+        height: 70vh;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+}
+
+/*=======================
+   Quiz APP
+========================*/
+
+.QuizApp{
+    width: 90%;
+    max-width: 600px;
+    margin: 15px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    background: #001e4d;
+    color: #fff;
+   
+}
+.img img{
+  width: 100%;
+  height: 300px;
+  margin-top: -10px;
+}
+.img{
+    background:#ffff;
+    width: 90%;
+    max-width: 600px;
+    margin: 5px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    color: #001e4d;
+    
+}
+.img h2{
+    margin-top: 8px;
+}
+.Mybtn button{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: tomato;
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 6px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    margin-top: 15px ;
+    margin-left: 300px;
+}
+.Mybtn button:hover{
+  background-color: rgba(29, 194, 194);
+}
+.Rulesbox.Activeinfo{
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.Rulesbox{
+    width: 90%;
+    max-width: 600px;
+    margin:100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    background: #001e4d;
+    color: #fff;
+    display: none;
+    
+    
+}
+.RulsTitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid lightgray;
+    margin-top: 15px;
+    padding: 10px;
+
+}
+.RulesList{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+li{
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 25px;
+    text-align: center;
+}
+.Button button{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: tomato;
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 6px 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-left: 35px ;
+    margin-top: 66px;
+}
+@media(max-width:700px){
+    .Mybtn button{
+        padding: 6px 10px; 
+        left: -5;
+        font-size:15px;
+    } 
+    .img{
+        width:80%;
+    }
+    .Button button{
+        font-size: 14px; 
+        margin-left: 25px ; 
+    }
+}
+button.ExitBtn{
+    border-radius: 30px;
+    margin-right: 200px;
+}
+button.Continue{
+    border-radius:  30px; 
+    background-color: aqua;
+ 
+}
+.Button button:hover{
+    background-color: rgba(29, 194, 194);  
+}
+button.ExitBtn:hover{
+    background-color: red;
+}
+.Questions.ActiveQuz{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.Questions{
+    
+    width: 350px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ffff;
+    box-shadow: rgba(0 0 0 /10%)0px 10px 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 48px;
+    opacity: 0;
+    pointer-events: none;
+}
+.Questionheder{
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.Questionheder .title{
+    font-size: 15px;
+    font-weight: 600;
+}
+.TimeCount{
+    color: #004085;
+    background: #cce5ff;
+    border:  1px solid #b8daff;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+}
+.Seconds{
+    font-size: 18px;
+    font-weight: 600;
+    height: 26;
+    width: 45px;
+    color: #efff;
+    border: 5px;
+    line-height: 26px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+.Timeline{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #007bff;
+}
+.section{
+    padding: 25px 30px 20px 30px;
+    
+}
+.text1{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 40px;
+}
+.myoptions{
+    padding: 20px 0px;
+    display: block;
+}
+.options{
+    background: aliceblue;
+    border: 1px solid #48c5fe;
+    border-radius: 5px;
+    padding: 13px 15px;
+    font-size: 17px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 17.5px;
+
+}
+.options:hover{
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+}
+footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    margin-top: 25px;
+}
+.totalQu{
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.Nextbtn{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 6px 25px;
+    outline: none;
+    border: none;
+    border-radius: 57px 0px 51px 0px;
+    box-shadow: rgba(0 0 0 /10%) 0px 10px 50px;
+    background: tomato;
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: all 0.3sc ease;
+    margin-top: 8px;
+}
+.Nextbtn:hover{
+    background-color: rgba(29, 194, 194); 
+}
+ .options.correct{
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+ }
+ .options.incorrect{
+    color: #721c24;
+    background:#f8d7da ;
+    border: 1px solid #c3e6cb;
+ }
+ .options.disable{
+    pointer-events: none;
+ }
+.container.display{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+ 
+.container{
+    background-image: url(img/undraw_Completed_m9ci.png);
+    background: #001e4d;
+    width: 90%;
+    max-width: 600px;
+    margin: 70px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    display: none;
+}
+
+ .App{
+    
+    background: #ffff;
+    width: 90%;
+    max-width: 600px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+ }
+ .App h1{
+    font-size: 45px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid;
+    padding: 30px;
+
+ }
+ .Quez{
+    padding:  20px 0;
+ }
+ .Quez h2{
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    text-align: center;
+
+ }
+ .btn{
+    background: #fff;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:all 0.3s ;
+ }
+ .btn:hover:not([disabled]){
+    background: #222;
+    color: #ffff;
+   
+ }
+ .btn:disabled{
+    cursor: no-drop;
+ }
+ #next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    width: 180px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    
+
+ }
+ 
+ .correct{
+    background: #9aeabc;
+    
+ }
+ .incorrect{
+    background: #ff9393;
+    
+ }
+
+ @media (min-width:380px){
+    .Mybtn button{
+        width: 80%;
+        margin-left: 40px;
+    }.img h2{
+        color:green;
+    }
+    .QuizApp{
+        width: 80%;
+        padding-left: 10px ;
+    }
+    .img img{
+        width: 80%;
+        height: 200px;
+        
+    }
+    .Rulesbox{
+        width: 80%;
+        margin-top: 30px;
+        
+    }
+    .RulsTitle{
+        color: aqua;
+        border-bottom: 3px solid #9aeabc;
+    }
+    .RulesList{
+        margin: 35px;
+    }
+    .Button button{
+        margin: 8px;
+    }
+  .Continue{
+    width: 40%;
+    margin: 10px;
+  }
+  .container{
+    width: 80%;
+    margin-top: 10px;
+
+  }
+  .App{
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .App img{
+    width: 80%;
+    height: 200px;
+  }
+  .App h1{
+    font-size: 30px;
+    text-align: center;
+    color: green;
+    padding: 5px;
+    font-family: 'AdorshoLipi', sans-serif;
+  }
+  #qustion{
+    font-size: 20px;
+    color: #021427;
+    font-family: 'AdorshoLipi', sans-serif;
+    
+  }
+  #answer-buttons{
+    text-align: center;
+    font-family: 'AdorshoLipi', sans-serif;
+  }
+  .btn{
+    font-size: 15px;
+    color:#222;
+    font-weight: 600;
+    font-family: 'AdorshoLipi', sans-serif;
+  }
+ }

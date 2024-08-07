@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Dwon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--     
+    <div class="mywatch">
+        <div class="H1"></div>
+        <div class="H2"></div>
+        <div class="H"></div>
+        <div class="M"></div>
+        
+        <br>
+        
+    </div><br>
+    <div class="date"></div> -->
+
+<!--
+<div class="myclock">
+    <div class="H"></div>
+    <div class="M"></div>
+</div><br>
+<div class="date"></div>
+-->
+
+<!-- <div class="calculator">
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="display"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="AC" onclick="DeletMe()"></td>
+            <td><input type="button" value="(" onclick="Calculator('(')"></td>
+            <td><input type="button" value=")" onclick="Calculator(')')"></td>
+            <td><input type="button" value="/" onclick="Calculator('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="Calculator('7')"></td>
+            <td><input type="button" value="8" onclick="Calculator('8')"></td>
+            <td><input type="button" value="9" onclick="Calculator('9')"></td>
+            <td><input type="button" value="+" onclick="Calculator('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="Calculator('4')"></td>
+            <td><input type="button" value="5" onclick="Calculator('5')"></td>
+            <td><input type="button" value="6" onclick="Calculator('6')"></td>
+            <td><input type="button" value="-" onclick="Calculator('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="Calculator('1')"></td>
+            <td><input type="button" value="2" onclick="Calculator('2')"></td>
+            <td><input type="button" value="3" onclick="Calculator('3')"></td>
+            <td><input type="button" value="*" onclick="Calculator('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="Calculator('0')"></td>
+            <td><input type="button" value="00" onclick="Calculator('00')"></td>
+            <td><input type="button" value="." onclick="Calculator('.')"></td>
+            <td><input type="button" value="=" onclick="Answer()"></td>
+        </tr>
+    </table>
+</div> -->
+   
+
+<div class="AppBody">
+    <div class="icons">
+        <i class="fa-solid fa-photo-film"></i>
+    </div>
+    <h3>Drag & Drop Image Uploader</h3>
+    <span>OR</span>
+    <button>Browse File</button>
+    <input type="file" hidden>
+</div>
+
+
+
+
+    <!-- <script src ="index.js"></script> -->
+    <script>
+        
+
+const DragArea = document.querySelector(".AppBody"),
+      DragText = DragArea.querySelector("h3"),
+      Button = DragArea.querySelector("button"),
+      input= DragArea.querySelector("input");
+
+      Button.onclick = ()=>{
+        input.click();
+    }    
+
+      input.addEventListener("change", UploadImage);
+
+      function UploadImage(){
+        
+        let imglink = URL.createObjectURL(input.files[0]);
+        DragArea.style.backgroundImage =`url(${imglink})`;
+        DragArea.textContent = "";
+      }
+DragArea.addEventListener("dragover", function(e){
+    e.preventDefault()
+    DragArea.classList.add("active");
+    DragText.textContent = "Release to Upload File";
+});
+DragArea.addEventListener("drop", function(e){
+     e.preventDefault();
+     input.files = e.dataTransfer.files;
+     UploadImage();
+});
+
+DragArea.addEventListener("dragleave",()=>{
+    DragArea.classList.remove("active");
+    DragText.textContent = "Drag & Drop Image Uploader"; 
+    UploadImage();
+});
+      
+
+    </script>
+</body>
+</html>
